@@ -2,7 +2,7 @@
 const crypto = require('crypto');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/urls');
+mongoose.connect(process.env.MONGO_URI);
 
 let urlSchema = mongoose.Schema({
     url: String,

@@ -49,6 +49,15 @@ exports.viewURL = (req,res) => {
         
         if(err) return res.json(err);
         
+        //console.log(data);
+        
+        if (data.length == 0) {
+            return res.json({
+                error: 'Unable to locate short URL: ' + shortend
+                
+            });
+        }
+        
         //console.log(data[0].url);
         res.redirect(data[0].url);
         
