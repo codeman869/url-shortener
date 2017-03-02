@@ -43,7 +43,7 @@ exports.viewURL = (req,res) => {
     
     let shortend = req.originalUrl.slice(1);
     
-    if (shortend === '')  return res.send('/');
+    if (shortend === '')  return res.render('index', {domain: req.get('host')});
     
     db.findOne(shortend, (err,data) => {
         

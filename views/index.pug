@@ -1,0 +1,27 @@
+html
+    head
+        link(href="/scripts/css/bootstrap.min.css" rel="stylesheet" type="text/css")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway" rel="stylesheet")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    body(style="font-family:'Open Sans Condensed'")
+        .container-fluid
+            .row
+                .col-md-4.col-md-offset-4
+                    .page-header.text-center 
+                        h1 URL Shortener Microservice
+                    .text-left
+                        p Examples for how to use the service
+                    code #{protocol}://#{domain}/new/http://www.google.com
+                    .text-center
+                        h3 Response:
+                    code { <br>
+                        | &nbsp;&nbsp;&nbsp; url: "http://www.google.com", <br>
+                        | &nbsp;&nbsp;&nbsp; shortened: #{protocol}://#{domain}/jHbu0aOq <br>
+                        | } 
+                    .text-center
+                        h3 Next
+                    .text-left
+                        p Navigate to #{protocol}://#{domain}/jHbu0aOq 
+                    .text-right
+                        h6.small Built by <a href="https://github.com/codeman869">Cody Deckard</a>
+                            
